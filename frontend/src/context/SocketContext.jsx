@@ -14,7 +14,7 @@ export const SocketProvider = ({ children }) => {
     const io = window.io;
     
     if (user && io) {
-      const newSocket = io('http://localhost:5000');
+      const newSocket = io('https://agrismart-backend-kxic.onrender.com');
       setSocket(newSocket);
 
       return () => newSocket.close();

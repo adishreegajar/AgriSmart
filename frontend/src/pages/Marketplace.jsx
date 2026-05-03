@@ -74,7 +74,7 @@ const Marketplace = () => {
     }
     
     try {
-      const { data } = await axios.post('http://localhost:5000/api/chat/conversations', 
+      const { data } = await axios.post('https://agrismart-backend-kxic.onrender.com/api/chat/conversations', 
         { recipientId: farmerId },
         { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
       );

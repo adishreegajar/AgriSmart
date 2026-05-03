@@ -57,7 +57,7 @@ const Chat = () => {
 
   const fetchConversations = async () => {
     try {
-      const { data } = await axios.get('http://localhost:5000/api/chat/conversations', {
+      const { data } = await axios.get('https://agrismart-backend-kxic.onrender.com/api/chat/conversations', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setConversations(data);
@@ -69,7 +69,7 @@ const Chat = () => {
 
   const fetchMessages = async (id) => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/api/chat/messages/${id}`, {
+      const { data } = await axios.get(`https://agrismart-backend-kxic.onrender.com/api/chat/messages/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setMessages(data);
@@ -95,7 +95,7 @@ const Chat = () => {
 
     try {
       // In a real app, we'd also save to DB via API
-      // await axios.post(`http://localhost:5000/api/chat/messages`, messageData);
+      // await axios.post(`https://agrismart-backend-kxic.onrender.com/api/chat/messages`, messageData);
       setNewMessage('');
     } catch (err) {
       console.error('Error saving message');
